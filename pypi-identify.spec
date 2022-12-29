@@ -4,7 +4,7 @@
 #
 Name     : pypi-identify
 Version  : 2.5.11
-Release  : 54
+Release  : 55
 URL      : https://files.pythonhosted.org/packages/dd/56/6ca55bade234d1eb36f09310021169385025b74c8f1fb637a4bcb2dcf3da/identify-2.5.11.tar.gz
 Source0  : https://files.pythonhosted.org/packages/dd/56/6ca55bade234d1eb36f09310021169385025b74c8f1fb637a4bcb2dcf3da/identify-2.5.11.tar.gz
 Summary  : File identification library for Python
@@ -15,6 +15,9 @@ Requires: pypi-identify-license = %{version}-%{release}
 Requires: pypi-identify-python = %{version}-%{release}
 Requires: pypi-identify-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 identify
@@ -72,15 +75,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1671498417
+export SOURCE_DATE_EPOCH=1672280651
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
