@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-identify
-Version  : 2.5.28
-Release  : 72
-URL      : https://files.pythonhosted.org/packages/d0/05/296b260ea9a4d40a933fd785b5de6b2fe1fef93f44023640a380e412f095/identify-2.5.28.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d0/05/296b260ea9a4d40a933fd785b5de6b2fe1fef93f44023640a380e412f095/identify-2.5.28.tar.gz
+Version  : 2.5.29
+Release  : 73
+URL      : https://files.pythonhosted.org/packages/d1/31/e0808997702fef9e8bd639879df6d6711277d40558e77b885cccec424042/identify-2.5.29.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d1/31/e0808997702fef9e8bd639879df6d6711277d40558e77b885cccec424042/identify-2.5.29.tar.gz
 Summary  : File identification library for Python
 Group    : Development/Tools
 License  : MIT MPL-2.0
@@ -61,10 +61,10 @@ python3 components for the pypi-identify package.
 
 
 %prep
-%setup -q -n identify-2.5.28
-cd %{_builddir}/identify-2.5.28
+%setup -q -n identify-2.5.29
+cd %{_builddir}/identify-2.5.29
 pushd ..
-cp -a identify-2.5.28 buildavx2
+cp -a identify-2.5.29 buildavx2
 popd
 
 %build
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1694531829
+export SOURCE_DATE_EPOCH=1695055256
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
