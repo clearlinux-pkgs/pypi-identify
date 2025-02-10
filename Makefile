@@ -1,5 +1,5 @@
 PKG_NAME := pypi-identify
-URL = https://files.pythonhosted.org/packages/82/bf/c68c46601bacd4c6fb4dd751a42b6e7087240eaabc6487f2ef7a48e0e8fc/identify-2.6.6.tar.gz
+URL = https://files.pythonhosted.org/packages/83/d1/524aa3350f78bcd714d148ade6133d67d6b7de2cdbae7d99039c024c9a25/identify-2.6.7.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
