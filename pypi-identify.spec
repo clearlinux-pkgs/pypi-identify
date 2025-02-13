@@ -7,7 +7,7 @@
 #
 Name     : pypi-identify
 Version  : 2.6.7
-Release  : 91
+Release  : 92
 URL      : https://files.pythonhosted.org/packages/83/d1/524aa3350f78bcd714d148ade6133d67d6b7de2cdbae7d99039c024c9a25/identify-2.6.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/83/d1/524aa3350f78bcd714d148ade6133d67d6b7de2cdbae7d99039c024c9a25/identify-2.6.7.tar.gz
 Summary  : File identification library for Python
